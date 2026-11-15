@@ -1,0 +1,35 @@
+{
+  "slug": "demo-bookcase",
+  "brand": "示例家具",
+  "name": "示例书柜",
+  "size": { "w": 800, "h": 2020, "d": 280 },
+  "expected": { "verticalQty": 2 },
+  "parts": [
+    { "id": "A", "name": "左侧板", "size": [18, 2020, 280], "pos": [-391, 1010, 0], "material": "board" },
+    { "id": "B", "name": "右侧板", "size": [18, 2020, 280], "pos": [391, 1010, 0], "material": "board" },
+    { "id": "C", "name": "顶板", "size": [764, 18, 280], "pos": [0, 2011, 0], "material": "board" },
+    { "id": "D", "name": "底板", "size": [764, 18, 280], "pos": [0, 75, 0], "material": "board" },
+    { "id": "E", "name": "层板", "size": [764, 18, 262], "pos": [0, 980, 0], "material": "board" },
+    { "id": "F", "name": "背板", "size": [800, 2020, 3.5], "pos": [0, 1010, -138], "material": "fiber" }
+  ],
+  "steps": [
+    { "title": "把木榫敲进四块横板", "add": [], "fix": [{ "kind": "dowel", "count": 16, "to": ["C", "D", "E"] }] },
+    { "title": "侧板扣到底板", "add": ["A", "B", "D"] },
+    { "title": "锁紧底板偏心轮", "add": [], "fix": [{ "kind": "cam", "count": 4 }] },
+    { "title": "装上顶板", "add": ["C"] },
+    { "title": "锁紧顶板偏心轮", "add": [], "fix": [{ "kind": "cam", "count": 6 }] },
+    { "title": "放上层板", "add": ["E"] },
+    { "title": "钉上背板", "add": ["F"], "fix": [{ "kind": "nail", "count": 18 }] },
+    { "title": "固定到墙上", "add": [], "fix": [{ "kind": "bracket", "count": 2 }] }
+  ],
+  "stepPages": [
+    { "page": 6, "src": "/manual-pages/demo-bookcase/p06.png" },
+    { "page": 7, "src": "/manual-pages/demo-bookcase/p07.png" },
+    { "page": 7, "src": "/manual-pages/demo-bookcase/p07.png" },
+    { "page": 8, "src": "/manual-pages/demo-bookcase/p08.png" },
+    { "page": 8, "src": "/manual-pages/demo-bookcase/p08.png" },
+    { "page": 9, "src": "/manual-pages/demo-bookcase/p09.png" },
+    { "page": 9, "src": "/manual-pages/demo-bookcase/p09.png" },
+    { "page": 10, "src": "/manual-pages/demo-bookcase/p10.png" }
+  ]
+}

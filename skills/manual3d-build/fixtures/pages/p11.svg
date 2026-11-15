@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1130" role="img" aria-label="示例装配页：固定到墙上">
+  <rect width="800" height="1130" fill="#ffffff"/>
+  <g fill="none" stroke="#1c1a17" stroke-width="4" stroke-linejoin="round">
+    <path d="M300 220 L300 760 L500 760 L500 220" />
+    <path d="M300 300 L220 300 L220 360" />
+    <circle cx="220" cy="380" r="14"/>
+    <path d="M220 400 L220 470" stroke-dasharray="12 10"/>
+    <path d="M500 300 L580 300 L580 360 L580 470" stroke-dasharray="12 10"/>
+    <path d="M120 470 L680 470" stroke-width="6"/>
+    <path d="M120 470 L120 900 M680 470 L680 900" stroke-dasharray="6 12"/>
+  </g>
+  <g fill="#1c1a17" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="54">
+    <text x="70" y="120">6</text>
+  </g>
+  <g fill="#1c1a17" font-family="Helvetica, Arial, sans-serif" font-size="26">
+    <text x="70" y="980">柜顶装两个 L 形固定件，拧进墙体。</text>
+    <text x="70" y="1025">孩子会爬，这一步不能省。</text>
+  </g>
+  <g transform="rotate(-28 400 1080)" opacity="0.16">
+    <text x="250" y="1090" fill="#1c1a17" font-family="Helvetica, Arial, sans-serif" font-size="30">示例页面 placeholder</text>
+  </g>
+</svg>

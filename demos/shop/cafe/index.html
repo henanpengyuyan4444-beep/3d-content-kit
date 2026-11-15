@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>3D 看店</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<canvas id="scene"></canvas>
+<div id="labels"></div>
+
+<header class="topbar">
+  <b id="spaceName">空间</b>
+  <span class="tag">3D 看店</span>
+</header>
+
+<div class="hud">
+  <button id="btnRotate" class="hbtn" title="自动旋转">自动</button>
+  <button id="btnLabels" class="hbtn on" title="显示标签">标签</button>
+</div>
+
+<p id="hint" class="hint">拖动看四周 · 点亮点看详情</p>
+<div id="card" class="card"></div>
+
+<script src="vendor/three.min.js"></script>
+<script src="data/space.js"></script>
+<script src="viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+{
+  "slug": "demo-bookcase",
+  "brand": "示例家具",
+  "name": "示例书柜 80×28×202",
+  "source": "示例手册（本仓库自绘，不含任何厂商资料）",
+  "size": {
+    "w": 800,
+    "h": 2020,
+    "d": 280
+  },
+  "expected": {
+    "verticalQty": 2
+  },
+  "tools": [
+    "十字螺丝刀",
+    "锤子"
+  ],
+  "parts": [
+    {
+      "id": "A",
+      "name": "左侧板",
+      "size": [
+        18,
+        2020,
+        280
+      ],
+      "pos": [
+        -391,
+        1010,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "B",
+      "name": "右侧板",
+      "size": [
+        18,
+        2020,
+        280
+      ],
+      "pos": [
+        391,
+        1010,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "C",
+      "name": "顶板",
+      "size": [
+        764,
+        18,
+        280
+      ],
+      "pos": [
+        0,
+        2011,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "D",
+      "name": "底板",
+      "size": [
+        764,
+        18,
+        280
+      ],
+      "pos": [
+        0,
+        75,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "E",
+      "name": "中间固定隔板",
+      "size": [
+        764,
+        18,
+        280
+      ],
+      "pos": [
+        0,
+        720,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "F",
+      "name": "层板 1",
+      "size": [
+        764,
+        18,
+        262
+      ],
+      "pos": [
+        0,
+        980,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "G",
+      "name": "层板 2",
+      "size": [
+        764,
+        18,
+        262
+      ],
+      "pos": [
+        0,
+        1220,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "H",
+      "name": "层板 3",
+      "size": [
+        764,
+        18,
+        262
+      ],
+      "pos": [
+        0,
+        1460,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "I",
+      "name": "层板 4",
+      "size": [
+        764,
+        18,
+        262
+      ],
+      "pos": [
+        0,
+        1720,
+        0
+      ],
+      "material": "board"
+    },
+    {
+      "id": "J",
+      "name": "背板",
+      "size": [
+        800,
+        2020,
+        3.5
+      ],
+      "pos": [
+        0,
+        1010,
+        -138
+      ],
+      "material": "fiber"
+    }
+  ],
+  "steps": [
+    {
+      "title": "把木榫敲进四块横板",
+      "detail": "每块板四根，敲到底，不要外露。",
+      "add": [],
+      "fix": [
+        {
+          "kind": "dowel",
+          "count": 16,
+          "to": [
+            "C",
+            "D",
+            "E"
+          ]
+        }
+      ],
+      "tools": [
+        "hammer"
+      ]
+    },
+    {
+      "title": "把偏心螺丝拧进两块侧板",
+      "detail": "每块 6 颗，螺杆朝板内。",
+      "add": [],
+      "fix": [
+        {
+          "kind": "camScrew",
+          "count": 12,
+          "to": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "tools": [
+        "screwdriver"
+      ]
+    },
+    {
+      "title": "侧板扣到底板",
+      "detail": "对准底板两端的木榫，垂直压到底。",
+      "add": [
+        "A",
+        "B",
+        "D"
+      ]
+    },
+    {
+      "title": "锁紧底板偏心轮",
+      "add": [],
+      "fix": [
+        {
+          "kind": "cam",
+          "count": 4,
+          "to": [
+            "D"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "装上中间隔板",
+      "add": [
+        "E"
+      ],
+      "fix": [
+        {
+          "kind": "cam",
+          "count": 2,
+          "to": [
+            "E"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "盖上顶板",
+      "add": [
+        "C"
+      ]
+    },
+    {
+      "title": "锁紧顶板偏心轮",
+      "add": [],
+      "fix": [
+        {
+          "kind": "cam",
+          "count": 6,
+          "to": [
+            "C"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "钉上背板",
+      "detail": "沿四边钉，钉在板材边缘中线上。",
+      "add": [
+        "J"
+      ],
+      "fix": [
+        {
+          "kind": "nail",
+          "count": 18,
+          "to": [
+            "J"
+          ]
+        }
+      ],
+      "warnings": [
+        "square"
+      ]
+    },
+    {
+      "title": "放上四块层板",
+      "detail": "层高按书的开本调。",
+      "add": [
+        "F",
+        "G",
+        "H",
+        "I"
+      ]
+    },
+    {
+      "title": "固定到墙上",
+      "detail": "柜顶装两个固定件，防止倾倒。",
+      "add": [],
+      "fix": [
+        {
+          "kind": "bracket",
+          "count": 2,
+          "to": [
+            "C"
+          ]
+        }
+      ],
+      "warnings": [
+        "wall",
+        "tip"
+      ]
+    }
+  ],
+  "stepPages": [
+    {
+      "page": 6,
+      "file": "pages/p06.svg"
+    },
+    {
+      "page": 7,
+      "file": "pages/p07.svg"
+    },
+    {
+      "page": 7,
+      "file": "pages/p07.svg"
+    },
+    {
+      "page": 8,
+      "file": "pages/p08.svg"
+    },
+    {
+      "page": 8,
+      "file": "pages/p08.svg"
+    },
+    {
+      "page": 8,
+      "file": "pages/p08.svg"
+    },
+    {
+      "page": 8,
+      "file": "pages/p08.svg"
+    },
+    {
+      "page": 9,
+      "file": "pages/p09.svg"
+    },
+    {
+      "page": 10,
+      "file": "pages/p10.svg"
+    },
+    {
+      "page": 11,
+      "file": "pages/p11.svg"
+    }
+  ],
+  "requirePages": true
+}

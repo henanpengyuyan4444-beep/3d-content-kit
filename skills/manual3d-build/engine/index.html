@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>3D 装配说明书</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="brand"><span class="dot"></span>3D 装配说明书<em>标品 Demo</em></div>
+    <div class="skus">
+      <button data-sku="main" class="on">3D 说明书</button>
+    </div>
+    <div class="sku-meta">
+      <strong id="skuName">BILLY 80×28×202</strong>
+      <span id="skuSub"></span>
+    </div>
+  </header>
+
+  <main>
+    <aside id="sidebar">
+      <div class="side-head"><span>装配步骤</span><b id="stepNo">01 / 14</b></div>
+      <div id="stepList"></div>
+      <a id="srcLink" href="#" target="_blank" rel="noreferrer">查看原说明书 PDF ↗</a>
+    </aside>
+
+    <section id="stage">
+      <canvas id="scene"></canvas>
+      <div id="labels"></div>
+
+      <div class="step-card">
+        <div class="sc-top">
+          <span class="sc-badge">STEP</span>
+          <h2 id="stepTitle">装木榫</h2>
+        </div>
+        <p id="stepText"></p>
+        <div id="stepChips" class="chips"></div>
+        <div id="stepTools" class="tools"></div>
+        <div id="stepWarn" class="warn">⚠ 家具必须与墙体固定，否则可能翻倒伤人。</div>
+      </div>
+
+      <div class="ref-card">
+        <div id="refHint">原说明书</div>
+        <img id="refImg" alt="原说明书对应页" />
+      </div>
+
+      <div class="hud">
+        <button id="btnPrev" class="hbtn" title="上一步（←）">←</button>
+        <button id="btnPlay" class="hbtn play" title="自动播放（空格）"><span id="playIcon">▶</span></button>
+        <button id="btnNext" class="hbtn" title="下一步（→）">→</button>
+        <div class="hsep"></div>
+        <label class="slider">
+          <span>拆解</span>
+          <input id="explode" type="range" min="0" max="80" value="0" />
+          <b id="explodeVal">0%</b>
+        </label>
+        <div class="hsep"></div>
+        <button id="toggleLabels" class="hbtn toggle on" title="零件标注">标注</button>
+        <button id="toggleHW" class="hbtn toggle on" title="五金件">五金</button>
+        <button id="btnReset" class="hbtn toggle" title="复位视角">复位</button>
+      </div>
+
+      <div class="hint">拖动旋转 · 滚轮缩放 · 点击零件看尺寸</div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div id="partCard" class="part-card"></div>
+    </section>
+  </main>
+</div>
+
+<div id="lightbox"><img alt="说明书页" /></div>
+
+<script src="vendor/three.min.js"></script>
+<script src="vendor/OrbitControls.js"></script>
+<script src="vendor/RoundedBoxGeometry.js"></script>
+<script src="data/sku.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

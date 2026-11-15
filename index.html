@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D 内容工厂 · 说明书与店铺</title>
+<style>
+  :root { --ink:#241f19; --muted:#6b6459; --line:#e4dcce; --bg:#f4f0e9; --accent:#b45309; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.6 -apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 56px 20px 80px; }
+  h1 { font-size: 30px; margin: 0 0 10px; letter-spacing: .01em; }
+  .lead { color: var(--muted); margin: 0 0 40px; max-width: 640px; }
+  .grid { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+  .card { display:block; text-decoration:none; color:inherit; background:#fffdf8; border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 10px 30px rgba(60,48,32,.08); transition: transform .18s, box-shadow .18s; }
+  .card:hover { transform: translateY(-3px); box-shadow:0 16px 40px rgba(60,48,32,.14); }
+  .card img { width:100%; display:block; aspect-ratio: 16/10; object-fit: cover; object-position: top center; }
+  .card .body { padding: 16px 18px 18px; }
+  .card b { font-size:17px; display:block; margin-bottom:6px; }
+  .card span { font-size:13px; color:var(--muted); }
+  .tag { display:inline-block; font-size:11px; color:#8a5a12; background:#f6e6cd; border-radius:999px; padding:2px 9px; margin-bottom:10px; }
+  footer { margin-top: 36px; font-size:12.5px; color:var(--muted); }
+  footer a { color: var(--accent); }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>3D 内容工厂</h1>
+  <p class="lead">把两类内容变成能点的 3D：一份装配说明书，或者一张店里拍的全景图。两条线共用一套引擎，输出都是能双击打开、能嵌网页和小程序的静态页面。</p>
+
+  <div class="grid">
+    <a class="card" href="demos/manual/demo-bookcase/index.html">
+      <img src="images/manual.png" alt="3D 装配说明书示例">
+      <div class="body">
+        <span class="tag">说明书线</span>
+        <b>3D 装配说明书</b>
+        <span>输入零件表 + 步骤 + 原页图，输出逐步动画、五金数量、原页对照。示例：10 步书柜。</span>
+      </div>
+    </a>
+    <a class="card" href="demos/shop/cafe/index.html">
+      <img src="images/shop.png" alt="3D 看店示例">
+      <div class="body">
+        <span class="tag">店铺线</span>
+        <b>3D 看店</b>
+        <span>输入一张 360 全景图 + 热点表，输出可拖动、可点标签的看店页面。示例：咖啡店。</span>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    演示素材：说明书示例为自绘页面；全景图来自 <a href="https://polyhaven.com/a/comfy_cafe">Poly Haven · comfy cafe</a>（CC0）。
+    两份 skill 都在仓库 <code>skills/</code> 下，可单独使用。
+  </footer>
+</div>
+</body>
+</html>
