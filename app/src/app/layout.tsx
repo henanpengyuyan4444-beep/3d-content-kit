@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Noto_Sans, Noto_Sans_Display } from "next/font/google";
+// 字体走系统栈：不依赖构建时下载 Google Fonts，离线也能构建和运行。
 import "./globals.css";
 import "./guide.css";
 import "./home.css";
@@ -9,20 +9,6 @@ import "./scan.css";
 import { Analytics } from "@vercel/analytics/next";
 import Offline from "@/components/Offline";
 import { SITE_URL } from "@/lib/site";
-
-const noto = Noto_Sans({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-noto",
-  display: "swap",
-});
-
-const display = Noto_Sans_Display({
-  subsets: ["latin", "latin-ext"],
-  weight: ["600", "700", "800"],
-  variable: "--font-display",
-  display: "swap",
-});
 
 const description = "中文 3D 装配说明书：把客户自己的纸质说明书变成可以点的分步演示，每一步都能对照原页。";
 
@@ -44,7 +30,17 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${noto.variable} ${display.variable}`}>
+    <html
+      lang="zh-CN"
+      style={
+        {
+          "--font-noto":
+            'system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif',
+          "--font-display":
+            '"PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, -apple-system, sans-serif',
+        } as React.CSSProperties
+      }
+    >
       <body>
         {children}
         <Analytics />
