@@ -4,7 +4,7 @@
 
 把一份中文装配说明书，或者一张店里拍的手机全景，变成能放进官网 / 小程序 / 公众号的静态 3D 页面。客户不需要提供模型文件。
 
-[![3D 装配说明书：BILLY 书柜 10 步，可拖动、可拆解、每步对照原手册](images/manual.gif)](https://pengyuyan3d.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html)
+[![3D 装配说明书：示例书柜 10 步，可拖动、可拆解、每步对照原手册](images/manual.gif)](https://pengyuyan3d.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html)
 
 | 线 | 输入 | 输出 | 适合谁 |
 | --- | --- | --- | --- |
