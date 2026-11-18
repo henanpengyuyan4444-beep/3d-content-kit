@@ -1,15 +1,32 @@
 # 3D 内容工厂
 
-把两类内容变成能点的 3D。两条线共用一套技术底座（three.js + 数据驱动 + 编译成静态页 + 手机优先），输出都是双击就能打开、也能嵌到网页或小程序里的页面。
+**在线演示 → [henanpengyuyan4444-beep.github.io/3d-content-kit](https://henanpengyuyan4444-beep.github.io/3d-content-kit/)**（浏览器直接打开，可拖、可点、可翻步骤，不用装任何东西）
+
+把一份中文装配说明书，或者一张店里拍的手机全景，变成能放进官网 / 小程序 / 公众号的静态 3D 页面。客户不需要提供模型文件。
+
+[![3D 装配说明书：BILLY 书柜 10 步，可拖动、可拆解、每步对照原手册](images/manual.gif)](https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html)
 
 | 线 | 输入 | 输出 | 适合谁 |
 | --- | --- | --- | --- |
 | **说明书线** `skills/manual3d-build` | 零件表 + 步骤 + 原页图（或一本手册） | 逐步 3D 装配演示，每步带零件、五金、原页对照 | 家具、货架、器材品牌 |
 | **店铺线** `skills/space3d-viewer` | 一张 360 全景图 + 热点表 | 可拖可点的看店页面，热点带说明与价格 | 餐饮、零售、展厅、民宿 |
 
+[![3D 看店：一张手机全景 + 热点标签](images/shop.gif)](https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/shop/cafe/index.html)
+
+两条线都是 three.js + 数据驱动 + 编译成静态页，产物是一个文件夹，双击能开，也能丢到任意静态托管或塞进小程序 web-view。
+
+## 为什么是这两条线
+
+这两类客户手上通常只有一份纸质说明书和一张手机全景，没有 3D 模型、也没预算重新建模。所以这里的做法不是"做个 3D 场景"，而是**把客户已有的那张纸 / 那张照片变成能点的东西**：零件按尺寸生成几何体，全景贴到球面上加热点。这也是边界所在（见文末）。
+
 ## 先看演示
 
-打开根目录的 `index.html`，两张卡片分别进两个示例。示例都是离线可跑的静态页。
+线上：
+
+- 说明书示例：<https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html>
+- 店铺示例：<https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/shop/cafe/index.html>
+
+离线：打开根目录的 `index.html`，两张卡片分别进两个示例。示例都是离线可跑的静态页。
 
 - 说明书示例：10 步书柜，含 6 张自绘原页图
 - 店铺示例：咖啡店全景（Poly Haven CC0），4 个热点
@@ -56,7 +73,7 @@ demos/manual/<slug>/       说明书示例成品
 demos/shop/<slug>/         看店示例成品
 skills/manual3d-build/     说明书 skill（引擎、脚本、样例、文档）
 skills/space3d-viewer/     看店 skill（引擎、脚本、样例、文档）
-images/                    首页配图
+images/                    首页配图与演示动图
 ```
 
 ## 许可
