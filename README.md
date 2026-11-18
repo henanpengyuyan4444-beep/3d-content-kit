@@ -1,17 +1,17 @@
 # 3D 内容工厂
 
-**在线演示 → [henanpengyuyan4444-beep.github.io/3d-content-kit](https://henanpengyuyan4444-beep.github.io/3d-content-kit/)**（浏览器直接打开，可拖、可点、可翻步骤，不用装任何东西）
+**在线演示 → [pengyuyan3d.github.io/3d-content-kit](https://pengyuyan3d.github.io/3d-content-kit/)**（浏览器直接打开，可拖、可点、可翻步骤，不用装任何东西）
 
 把一份中文装配说明书，或者一张店里拍的手机全景，变成能放进官网 / 小程序 / 公众号的静态 3D 页面。客户不需要提供模型文件。
 
-[![3D 装配说明书：BILLY 书柜 10 步，可拖动、可拆解、每步对照原手册](images/manual.gif)](https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html)
+[![3D 装配说明书：BILLY 书柜 10 步，可拖动、可拆解、每步对照原手册](images/manual.gif)](https://pengyuyan3d.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html)
 
 | 线 | 输入 | 输出 | 适合谁 |
 | --- | --- | --- | --- |
 | **说明书线** `skills/manual3d-build` | 零件表 + 步骤 + 原页图（或一本手册） | 逐步 3D 装配演示，每步带零件、五金、原页对照 | 家具、货架、器材品牌 |
 | **店铺线** `skills/space3d-viewer` | 一张 360 全景图 + 热点表 | 可拖可点的看店页面，热点带说明与价格 | 餐饮、零售、展厅、民宿 |
 
-[![3D 看店：一张手机全景 + 热点标签](images/shop.gif)](https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/shop/cafe/index.html)
+[![3D 看店：一张手机全景 + 热点标签](images/shop.gif)](https://pengyuyan3d.github.io/3d-content-kit/demos/shop/cafe/index.html)
 
 两条线都是 three.js + 数据驱动 + 编译成静态页，产物是一个文件夹，双击能开，也能丢到任意静态托管或塞进小程序 web-view。
 
@@ -23,8 +23,8 @@
 
 线上：
 
-- 说明书示例：<https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html>
-- 店铺示例：<https://henanpengyuyan4444-beep.github.io/3d-content-kit/demos/shop/cafe/index.html>
+- 说明书示例：<https://pengyuyan3d.github.io/3d-content-kit/demos/manual/demo-bookcase/index.html>
+- 店铺示例：<https://pengyuyan3d.github.io/3d-content-kit/demos/shop/cafe/index.html>
 
 离线：打开根目录的 `index.html`，两张卡片分别进两个示例。示例都是离线可跑的静态页。
 
